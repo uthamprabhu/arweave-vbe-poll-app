@@ -1,13 +1,13 @@
+// PollVote.jsx
+
 'use client';
 
-import { votePoll } from "@/utils/PollData";
-
-// import { votePoll } from '../utils/pollData'
+import { votePoll } from '@/utils/pollData';
 
 export default function PollVote({ poll, onVote }) {
     const handleVote = (index) => {
         votePoll(poll.id, index);
-        onVote();
+        onVote(); // Trigger a callback to refresh or show results
     };
 
     return (
